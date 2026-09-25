@@ -1,1 +1,35 @@
+STUDENT TABLE NORMALIZATION UP TO 3NF
 
+CREATE TABLE DEPARTMENT (
+    DepartmentID NUMBER(5) PRIMARY KEY,
+    DepartmentName VARCHAR(30) NOT NULL
+    DepartmentName VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE FACULTY (
+    FacultyID NUMBER(5) PRIMARY KEY,
+    FacultyName VARCHAR(30) NOT NULL
+    FacultyName VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE COURSE (
+    CourseID NUMBER(5) PRIMARY KEY,
+    CourseName VARCHAR(30) NOT NULL,
+    CourseName VARCHAR(30) NOT NULL,
+    FacultyID NUMBER(5),
+    CONSTRAINT fk_course_faculty
+        FOREIGN KEY (FacultyID)
+CREATE TABLE COURSE (
+
+CREATE TABLE STUDENT (
+    StudentID NUMBER(5) PRIMARY KEY,
+    StudentName VARCHAR(30) NOT NULL,
+    StudentName VARCHAR(30) NOT NULL,
+    CourseID NUMBER(5),
+    DepartmentID NUMBER(5),
+    CONSTRAINT fk_student_course
+CREATE TABLE STUDENT (
+        FOREIGN KEY (DepartmentID)
+        REFERENCES DEPARTMENT(DepartmentID)
+);
+```
